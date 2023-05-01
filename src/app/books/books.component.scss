@@ -1,0 +1,132 @@
+.container {
+  .dashImg {
+    width: 100%;
+    height: 80vh;
+    background-image: url('../../assets/img/DALL·E\ 2023-04-28\ 12.48.15\ -\ Story\ books\ background.png');
+    background-repeat: repeat-y;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    animation: moveit 2s ease-in-out;
+  }
+  @keyframes moveit {
+    0% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .books-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .books-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: end;
+    color: #fff;
+    background-color: #660303;
+    padding: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+    /* Color transition effect */
+    transition: color 0.5s ease-in-out;
+    animation: change-color 3s ease-in-out infinite;
+  }
+
+  @keyframes change-color {
+    0% {
+      color: #fff;
+    }
+    25% {
+      color: #a717ac;
+    }
+    50% {
+      color: #fc6767;
+    }
+    75% {
+      color: #ff00c8;
+    }
+    100% {
+      color: #fffb00;
+    }
+  }
+  .btns {
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    bottom: 300px;
+    animation: moveup 2s ease-in-out;
+  }
+
+  @keyframes moveup {
+    0% {
+    transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .show-books-btn {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #fc6767;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  .hide-books-btn {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #fc6767;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+}

@@ -1,0 +1,109 @@
+.input-searchbar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+input[type="text"] {
+  width: 35%;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1.5rem;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #666;
+  transition: all 0.3s ease-in-out;
+
+  &:focus {
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+  }
+
+  &::placeholder {
+    color: #999;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-color, #ffffff);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+}
+
+
+img {
+  height: 10rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+    transform: translateY(-10px);
+  }
+}
+
+.add-to-cart-btn {
+  background-color: #fc6767; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #fa6f6f; /* Darker green */
+  }
+}
+.remove-from-cart-btn {
+  background-color: #140a0a; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #000000; /* Darker green */
+  }
+}
+
+.book-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.book-author {
+  font-size: 16px;
+  color: var(--text-color, #333333);
+}
+
+.book-advice {
+  font-size: 16px;
+  color: var(--text-color, #333333);
+  margin-top: auto;
+}
+

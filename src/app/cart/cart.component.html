@@ -1,0 +1,14 @@
+<div class="container">
+  <div *ngIf="getCart().length === 0" class="empty-cart">
+    <h1>There's no book in your cart yet</h1>
+  </div>
+  <div *ngIf="getCart().length > 0" class="cart">
+    <div *ngFor="let book of getCart()" class="cart__item">
+      <img [src]="book.imageUrl" alt="{{book.title}}" class="cart__item__img">
+      <h3 class="cart__item__title">{{book.title | titlecase}}📚</h3>
+      <p class="cart__item__author">Author: {{book.author}}</p>
+      <p class="cart__item__advice">Advice: {{book.advice}}</p>
+      <p class="cart__item__amount">Amount: {{book.amount | currency: 'XAF': 'symbol'}}</p>
+    </div>
+  </div><
+</div>

@@ -1,0 +1,9 @@
+<div class="book-card" cdkDrag>
+  <img [src]="book.imageUrl" alt="{{book.title}}">
+  <h3 class="book-title">{{book.title | titlecase}}📚</h3>
+  <p class="book-author">Author: {{book.author}}</p>
+  <p class="book-advice">Advice: {{book.advice}}</p>
+  <p class="book-amount">Amount: {{book.amount | currency: 'XAF': 'symbol'}}</p>
+  <button *ngIf="!isInCart" (click)="addToCart()" class="add-to-cart-btn ">Add to Cart</button>
+  <button *ngIf="isInCart" (click)="removeFromCart()" class="remove-from-cart-btn">Move from Cart</button>
+</div>

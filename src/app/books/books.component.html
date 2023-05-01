@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="dashImg"></div>
+  <h1 class="books-heading">Storybooks by Michel Mouhani</h1>
+  <div class="btns">
+    <button *ngIf="!vanishBtn" class="show-books-btn"  (click)="showBtn()">Show Books</button>
+    <button *ngIf="hideBtn" class="hide-books-btn"  (click)="hideBtn()">Hide Books</button>
+  </div>
+  <div class="carousel" *ngIf="!showBooks">
+    <app-carousel [images]="['https://img.freepik.com/free-vector/student-boy-with-reading-book-hands_25030-39049.jpg?size=626&ext=jpg&uid=R101190564&semt=robertav1_2_sidr', 'https://img.freepik.com/free-vector/reading-book-concept-illustration_114360-8512.jpg?size=626&ext=jpg&uid=R101190564&semt=robertav1_2_sidr', 'https://img.freepik.com/free-vector/book-readers-concept_74855-6263.jpg?size=626&ext=jpg&uid=R101190564&semt=robertav1_2_sidr', 'https://img.freepik.com/premium-vector/man-is-holding-large-book-his-hands_531064-8625.jpg?size=626&ext=jpg&uid=R101190564&semt=robertav1_2_sidr', 'https://img.freepik.com/premium-vector/collection-people-reading-students-studying_213307-68.jpg?size=626&ext=jpg&uid=R101190564&semt=robertav1_2_sidr', 'https://img.freepik.com/free-vector/people-home-reading-books-that-are-shelves_1284-64335.jpg?size=626&ext=jpg&uid=R101190564&semt=robertav1_2_sidr']"></app-carousel>
+  </div>
+  <div class="books-container">
+    <div *ngFor="let singleBook of books; let i = index">
+      <div *ngIf="showBooks">
+        <!-- <app-book (bookEmitter)="addToCart($event)" [book]="singleBook"></app-book> -->
+        <app-book [book]="singleBook"></app-book>
+      </div>
+    </div>
+  </div>
+</div>

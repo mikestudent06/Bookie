@@ -1,0 +1,28 @@
+<nav class="nav">
+  <div class="logo">
+    <a routerLink="/">Booki<span>e</span></a>
+  </div>
+  <ul class="nav-links">
+    <li>
+      <a routerLink="/">Home</a>
+    </li>
+    <li>
+      <a routerLink="/cart">Cart</a>
+    </li>
+  </ul>
+  <ul class="loginORregister">
+    <ng-container *ngIf="!isAuthenticated()">
+      <li>
+        <a routerLink="register">Register</a>
+      </li>
+      <li>
+        <a routerLink="login">Login</a>
+      </li>
+    </ng-container>
+    <ng-container *ngIf="isAuthenticated()">
+      <li (click)="logout()">
+        <a>Logout</a>
+      </li>
+    </ng-container>
+  </ul>
+</nav>
